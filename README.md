@@ -1,57 +1,70 @@
-# Calculadora Simples em Java
-Este é um projeto de uma calculadora simples desenvolvida em Java, que realiza operações matemáticas básicas como soma, subtração, multiplicação e divisão. O projeto é focado em ensinar conceitos básicos de programação, como o uso de operadores, controle de fluxo e interação com o usuário no console.
+# ➕➖✖️➗ Calculadora Simples em Java
 
-Funcionalidades
+Um projeto didático que implementa uma calculadora básica em Java, capaz de realizar as quatro operações aritméticas fundamentais: adição, subtração, multiplicação e divisão. Este projeto é ideal para quem está começando a aprender programação e deseja entender conceitos como operadores matemáticos, estruturas de controle de fluxo (`if`/`switch`) e interação básica com o usuário através do console.
 
-Operações suportadas:
-* Soma
-* Subtração
-* Multiplicação
-* Divisão
+## ✨ Funcionalidades Principais
 
-O usuário pode:
-* Inserir dois números
-* Escolher uma operação
-* Ver o resultado da operação.
+* **Operações Suportadas:**
+    * ➕ Soma
+    * ➖ Subtração
+    * ✖️ Multiplicação
+    * ➗ Divisão
+* **Interação com o Usuário:**
+    1.  Permite a inserção de dois números reais.
+    2.  Solicita a escolha da operação desejada.
+    3.  Exibe o resultado da operação realizada.
+* **Tratamento de Erro:**
+    * Implementação para evitar divisão por zero, exibindo uma mensagem informativa ao usuário.
 
-Como usar
-1. Clone o repositório para a sua máquina local.
-2. No terminal, navegue até a pasta do projeto.
-3. Execute o programa.
-4. O programa pedirá que você insira dois números e a operação que deseja realizar. A calculadora irá então exibir o resultado no console.
+## 🚀 Como Utilizar
 
-**Nota**: Se o usuário tentar dividir por zero, o programa irá exibir uma mensagem de erro.
+Siga estes passos para executar a calculadora na sua máquina:
 
+1.  **Clone o Repositório:**
+    ```bash
+    git clone https://github.com/pitercoding/CalculadoraSimples
+    cd CalculadoraSimplesJava
+    ```
 
-O código é simples e direto, focando na lógica de operações matemáticas. A estrutura do código é a seguinte:
-1. **Entrada de dados**: O programa solicita ao usuário a entrada de dois números e a operação.
-2. **Processamento**: A operação desejada é realizada entre os dois números.
-3. **Saída**: O resultado da operação é exibido no console.
+2.  **Navegue até a Pasta do Projeto:**
+    ```bash
+    cd CalculadoraSimples
+    ```
 
-Como funciona o código
-O código realiza as operações utilizando `if` e `switch` para determinar qual operação será feita. Ele utiliza a entrada do usuário para decidir o tipo de operação a ser realizada e então executa a operação. Exemplo de código simples:
-````
+3.  **Compile e Execute o Programa:**
+    Abra um terminal na pasta do projeto e execute os seguintes comandos:
+    ```bash
+    javac CalculadoraSimples.java
+    java CalculadoraSimples
+    ```
+    O programa será iniciado e solicitará que você insira os números e a operação desejada diretamente no console.
+
+## ⚙️ Entendendo o Código
+
+O código segue um fluxo simples e direto:
+
+1.  **Entrada de Dados:** Utiliza a classe `Scanner` para receber a entrada do usuário para os dois números e a operação a ser realizada.
+2.  **Processamento:** Emprega uma estrutura `switch` (com alternativas `if` para a divisão por zero) para determinar qual operação matemática executar com base na entrada do usuário.
+3.  **Saída:** O resultado final do cálculo é impresso no console.
+
+```java
 import java.util.Scanner;
 
 public class CalculadoraSimples {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Solicita o primeiro número
         System.out.print("Digite o primeiro número: ");
         double num1 = scanner.nextDouble();
 
-        // Solicita a operação
         System.out.print("Digite a operação (+, -, *, /): ");
         String operacao = scanner.next();
 
-        // Solicita o segundo número
         System.out.print("Digite o segundo número: ");
         double num2 = scanner.nextDouble();
 
         double resultado = 0;
 
-        // Realiza o cálculo conforme a operação
         switch (operacao) {
             case "+":
                 resultado = num1 + num2;
@@ -75,22 +88,28 @@ public class CalculadoraSimples {
                 return;
         }
 
-        // Exibe o resultado
         System.out.println("Resultado: " + resultado);
+        scanner.close(); // Boa prática: fechar o Scanner
     }
 }
-````
+```
 
-Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
+* Java: A linguagem de programação principal utilizada para o desenvolvimento da calculadora.
 
-**Java**: A calculadora foi construída utilizando a linguagem de programação Java, um dos principais pilares da programação orientada a objetos.
+## 🤝 Contribuição
+Contribuições são bem-vindas! Se você tiver alguma sugestão de melhoria ou quiser adicionar novas funcionalidades, siga os passos abaixo:
 
-Contribuição
 1. Faça um fork do repositório.
-2. Crie uma branch para sua feature (`git checkout -b feature/alguma-feature`).
-3. Commit suas alterações (`git commit -am 'Adicionando uma nova feature'`).
-4. Push para a branch (`git push origin feature/alguma-feature`).
+2. Crie uma branch para sua funcionalidade (git checkout -b feature/nova-funcionalidade).
+3. Faça o commit das suas alterações (git commit -am 'Adiciona nova funcionalidade').
+4. Faça o push para a branch (git push origin feature/nova-funcionalidade).
 5. Abra um pull request.
+   
+## 📜 Licença
+Este projeto está licenciado sob a Licença MIT. 
 
-Licença
-Este projeto está sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
+---
+Sobre este projeto: Uma calculadora simples desenvolvida como um exercício prático para demonstrar os fundamentos da programação em Java.
+
+EN: Simple calculator developed in Java as a practical exercise to demonstrate the fundamentals of programming.
